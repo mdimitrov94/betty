@@ -2,7 +2,7 @@ import { useState } from "react";
 import Images from "./components/Images";
 
 const App = () => {
-  const [imagesCount, setImagesCount] = useState(0);
+  const [imagesCount, setImagesCount] = useState(1);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -19,7 +19,8 @@ const App = () => {
           </span>
           <form onSubmit={handleSubmit} className="flex flex-col">
             <input
-              value={imagesCount}
+              type="number"
+              min={1}              value={imagesCount}
               onChange={(e) => setImagesCount(+e.target.value)}
               className="mb-2 p-2 border border-gray-300 rounded-md"
             />
