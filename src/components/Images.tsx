@@ -36,7 +36,7 @@ const Images = ({ count }: { count: number }) => {
   };
 
   const transitionClassNames = isTransitioning
-    ? `duration-${TRANSITION_DELAY_MS} ease-linear transition-left`
+    ? `duration-300 ease-linear transition-left`
     : "";
 
   return (
